@@ -86,6 +86,8 @@ router.get("/timeline/all", async (req, res) => {
       })
     );
     res.json(userPosts.concat(...friendPosts));
+    // const object = userPosts.concat(...friendPosts);
+    // res.send(object);
   } catch (err) {
     res.status(500).json(err);
   }
